@@ -1,0 +1,27 @@
+const whiteColor = 'rgb(255, 255, 255)'
+
+class Elements {
+    rock() {
+        cy.get('#playerRock').click()
+        cy.get('#playerRock').should('have.css', 'color', whiteColor)
+    }
+    paper() {
+        cy.get('#playerPaper').click()
+        cy.get('#playerPaper').should('have.css', 'color', whiteColor)
+
+    }
+    scissors() {
+        cy.get('#playerScissors').click()
+        cy.get('#playerScissors').should('have.css', 'color', whiteColor)
+    }
+    lizard() {
+        cy.get('#playerLizard').click()
+        cy.get('#playerLizard').should('have.css', 'color', whiteColor)
+    }
+    spock() {
+        cy.get('#playerSpock').click()
+        cy.get('#playerSpock').should('have.css', 'color', whiteColor)
+    }
+}
+
+export default Elements
