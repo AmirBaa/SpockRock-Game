@@ -1,19 +1,17 @@
 /// <reference types="cypress" />
 import Elements from './pageObjects/pageObjects'
 
-describe('End to end testing of Rock Paper Scissors Lizard Spock game', () => {
+describe('Rock Paper Scissors Lizard Spock game', () => {
     let pageElements
     beforeEach(() => {
         cy.visit('http://127.0.0.1:5500/')
         pageElements = new Elements()
 
     })
-
     it('adds scores accordingly if rock selected', () => {
         pageElements.rock()
         cy.checkScore()
     })
-
     it('adds scores accordingly if paper selected', () => {
         pageElements.paper()
         cy.checkScore()
@@ -40,5 +38,4 @@ describe('End to end testing of Rock Paper Scissors Lizard Spock game', () => {
 
 
     })
-
 })
